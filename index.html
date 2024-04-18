@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!--=============== FIREBASE ===============-->
+<script type="module" src="firebaseconect.js"> </script>
+    <title>Brooklyn Editorial</title>
+    <link rel="icon" type="image/png" href="assets/img/Screenshot 2024-03-24 180952.png" >
+</head>
+
+<body>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="index.html" class="nav__logo">Brooklyn Editorial</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Sobre Nosotros</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Libros</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                    <!-- <li class="nav__item"><a href="login.html" class="nav__link">Inicia sesión</a></li>
+                    <li class="nav__item" id="logout-button"><a href="#" class="nav__link">Cerrar sesión</a></li> -->
+
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                  
+                    <h1 class="home__title">Brooklyn Editorial</h1>
+                    <h2 class="home__subtitle">Hecho con amor desde <br> Misiones.</h2>
+                    <a href="#menu" class="button">¡Explora Nuestros Libros!</a>
+                </div>
+
+               <!-- <img src="assets/img/home.png" alt="" class="home__img">-->
+            </div>
+        </section>
+         <!-- Sección de "Mis Libros" -->
+
+    <!-- <span class="section-subtitle my-books__initial" id="my-books">Mis Libros</span>
+    <h2 class="section-title my-books__initial">Explora tus libros</h2>
+    
+    <div class="my-books__container bd-grid"> -->
+
+        <!--========== ABOUT ==========-->
+        <section class="about section bd-container" id="about">
+            <div class="about__container  bd-grid">
+                <div class="about__data">
+                    <span class="section-subtitle about__initial">Sobre Nosotros</span>
+                    <h2 class="section-title about__initial">Ofrecemos las mejores <br> historias </h2>
+                    <p class="about__description"> Contamos con una visión audaz y un enfoque centrado en la calidad, nos dedicamos a transformar la experiencia editorial para nuestros lectores y autores.
+                     Trabajamos en estrecha colaboración con nuestra comunidad para fomentar la creatividad, celebrar la diversidad literaria y promover la pasión por la lectura en todo momento.</p>
+                    <a href="#" class="button">Explora nuestro catálogo</a>
+
+                </div>
+
+               <!-- <img src="assets/img/about.jpg" alt="" class="about__img">-->
+            </div>
+        </section>
+       
+        <!-- Aquí se mostrarán los libros del usuario -->
+    </div>
+</section>
+
+        <!--========== SERVICES ==========-->
+        <section class="services section bd-container" id="services">
+          <!--  <span class="section-subtitle">Ofrecemos</span>-->
+            <h2 class="section-title">Nuestros Servicios</h2>
+        
+            <div class="services__container  bd-grid">
+                <div class="services__content">
+                    <h3 class="services__title">Libros Online</h3>
+                    <p class="services__description">Accede a una amplia biblioteca de libros digitales para disfrutar en línea desde cualquier dispositivo.</p>
+                </div>
+        
+        
+                <div class="services__content">
+                    <h3 class="services__title">Eventos Literarios</h3>
+                    <p class="services__description">Eventos en línea, charlas con autores, presentaciones de libros y talleres literarios.</p>
+                </div>
+        
+                <div class="services__content">
+                    <h3 class="services__title">Cursos</h3>
+                    <p class="services__description">Variedad de cursos en línea diseñados para ayudarte a aprender y crecer en diferentes áreas de interés.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!--========== MENU ==========-->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle"></span>
+            <h2 class="section-title">Libros</h2>
+
+            <div class="menu__container bd-grid">
+                <div class="menu__content">
+                    <img src="assets/img/PaquisArlandi.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Paqui Arlandis</h3>
+                    <span class="menu__detail">Entre luces y sombras</span>
+                    <span class="menu__preci">$2.200</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/ManuelArduinoPavon.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Manuel Arduino Pavon</h3>
+                    <span class="menu__detail">Diario de los últimos siete sepultureros del pueblo </span>
+                    <span class="menu__preci">$2.500</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/GonzalezEduardo.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Gonzalez Eduardo</h3>
+                    <span class="menu__detail">Lo que no muestra un espejo</span>
+                    <span class="menu__preci">$2.550</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle"></span>
+            <h2 class="section-title">Novedades</h2>
+            <span class="section-subtitle">Mes de Abril</span>
+
+            <div class="menu__container bd-grid">
+                <div class="menu__content">
+                    <img src="assets/img/PaquisArlandi.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Paqui Arlandis</h3>
+                    <span class="menu__detail">Entre luces y sombras</span>
+                    <span class="menu__preci">$2.200</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/ManuelArduinoPavon.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Manuel Arduino Pavon</h3>
+                    <span class="menu__detail">Diario de los últimos siete sepultureros del pueblo </span>
+                    <span class="menu__preci">$2.500</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/GonzalezEduardo.png" alt="" class="menu__img">
+                    <h3 class="menu__name">Gonzalez Eduardo</h3>
+                    <span class="menu__detail">Lo que no muestra un espejo</span>
+                    <span class="menu__preci">$2.550</span>
+                    <span class="menu__detail">Proximamente</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-book-alt'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== APP =======-->
+        <section class="app section bd-container">
+            <div class="app__container bd-grid">
+                <div class="app__data">
+                   
+                    <h2 class="section-title app__initial">Navidad En Nueva York </h2>
+                    <span class="section-subtitle app__initial"> Disponible 28 de Junio</span>
+                    <p class="app__description"> Cautivadora historia de amor que florece en medio del bullicio festivo
+                        de la Gran Manzana, donde dos almas solitarias encuentran consuelo y esperanza entre las luces
+                        centelleantes y la magia de la temporada invernal. En este relato, el poder del amor se
+                        entrelaza con el encanto de la ciudad que nunca duerme, creando un ambiente lleno de romance,
+                        sorpresas y la promesa de un futuro lleno de felicidad.</p>
+                  <!--  <div class="app__stores">
+                        <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
+                        <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a>
+                    </div>-->
+                    <a href="#" class="button">Consíguelo</a>
+                </div>
+
+
+
+                <img src="assets/img/Screenshot 2024-03-21 113020.png" alt="" class="app__img">
+            </div>
+        </section>
+        <section class="app section bd-container">
+            <div class="app__container bd-grid">
+                <div class="app__data">
+                    <span class="section-subtitle app__initial">Brooklyn Editorial estuvo presente en el Parlamento de la Mujer 2024</span>
+                    <h2 class="section-title app__initial">Proyecto de apoyo para escritores independientes</h2>
+                    <p class="app__description">Proponiendo
+                        crear el Programa
+                        "Brooklyn" destinado a
+                        escritores
+                        independientes, a los
+                        efectos de promover y
+                        estimular la
+                        producción literaria
+                        misionera.</p>
+                    <!-- <div class="app__stores">
+                        <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
+                        <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a>
+                    </div> -->
+
+                    <!-- <a href="" class="button">Más información</a> -->
+                </div>
+               
+            </div>
+        </section>
+        
+
+
+        <!--========== CONTACT US ==========-->
+        
+
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Fundacion Innovar</span>
+                    <h2 class="section-title contact__initial">Activar Misiones</h2>
+                   <p class="contact__description"> "Desde nuestro lugar haremos todo lo posible para que el gobierno tenga las herramientas para llevar acabo los cambios para que mejore la vida de los Argentinos ♥️🧉"</p>
+                   
+                </div>
+
+               <!-- <div class="contact__button">
+                    <a href="https://wa.link/8y8kha" class="button">Contáctanos ahora</a>
+                </div>-->
+                
+            </div>
+        </section>
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">¿Alguna duda?</span>
+                    <h2 class="section-title contact__initial">Contáctanos</h2>
+                 <!--  <p class="contact__description">If you want to reserve a table in our restaurant, contact us and we will attend you quickly, with our 24/7 chat service.</p>--> 
+                </div>
+
+                <div class="contact__button">
+                    <a href="https://wa.link/8y8kha" class="button">Contáctanos ahora</a>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Brooklyn</a>
+                <span class="footer__description">Editorial</span>
+                <div>
+                  
+                    <a href="https://www.instagram.com/zoe.gonzalez.ok" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                  
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Servicios</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Lectura online</a></li>
+                    <li><a href="#" class="footer__link">Nuestros libros</a></li>
+                    <li><a href="#" class="footer__link">Cursos</a></li>
+
+
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Información</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Concurso Literario</a></li>
+                    <li><a href="https://wa.link/8y8kha" class="footer__link">Contáctanos</a></li>
+                    <li><a href="mailto:brooklyneditorial@gmail.com" class="footer__link">Envíanos tu manuscrito</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Dirección</h3>
+                <ul>
+                    <li>Posadas - Misiones</li>
+                    <li>+54 3764 210094</li>
+                    <li>brooklyneditorial@gmail.com</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <p class="footer__copy">&#169; 2024 Zoe Gonzalez. Todos los derechos reservados</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>  
+
+<script>
+    // Supongamos que tienes una función que se llama cuando el usuario inicia sesión
+    function usuarioAutenticado() {
+        // Tu lógica para verificar la autenticación del usuario aquí
+        // Por simplicidad, utilizaremos una variable booleana
+        var autenticado = true;
+
+        if (autenticado) {
+            // Oculta la opción de inicio de sesión
+            var linkInicioSesion = document.querySelector('.nav__link[href="login.html"]');
+            linkInicioSesion.style.display = 'none';
+        }
+    }
+
+    // Llama a la función usuarioAutenticado cuando se carga la página
+    document.addEventListener('DOMContentLoaded', usuarioAutenticado);
+</script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAuth,
+       createUserWithEmailAndPassword, 
+       signInWithEmailAndPassword,
+       signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAm-VynFGXN6MW_vFD_bartRU8ZYteEDkM",
+      authDomain: "editorialbrooklyn-757ab.firebaseapp.com",
+      projectId: "editorialbrooklyn-757ab",
+      storageBucket: "editorialbrooklyn-757ab.appspot.com",
+      messagingSenderId: "910588682338",
+      appId: "1:910588682338:web:93cc876cd9df4219fc313b"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    const registrarmeButton = document.getElementById('registrarmeButton');
+
+
+
+
+// Verificar si hay un correo electrónico almacenado en el almacenamiento local al cargar la página de índice
+window.onload = function() {
+    var userEmail = localStorage.getItem('userEmail');
+    if(userEmail) {
+        document.getElementById('my-books').innerHTML = 'Bienvenido de nuevo ' + userEmail;
+    }
+}
+
+registrarmeButton.addEventListener('click', () => {
+    // Redirige al usuario a la página de crearusuario.html
+    window.location.href = 'crearusuario.html';
+});
+
+
+
+  </script>
+  
+
+  <script>
+    // Evento de clic para el botón de "Cerrar sesión"
+    document.getElementById('logout-button').addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar que el enlace redireccione directamente
+
+        // Aquí puedes agregar la lógica para limpiar cualquier información de sesión o datos de autenticación
+        // Por ejemplo, si estás utilizando cookies, puedes eliminar la cookie de autenticación
+
+        // Redirige al usuario a la página de inicio de sesión
+        window.location.href = 'login.html';
+    });
+</script>
+

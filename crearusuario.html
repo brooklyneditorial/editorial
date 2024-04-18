@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styleslogin.css">
+ <!--=============== FIREBASE ===============-->
+
+
+
+        <title>Brooklyn Editorial</title>
+    <link rel="icon" type="image/png" href="assets/img/Screenshot 2024-03-24 180952.png" >
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="login__content">
+                <img src="assets/img/drib-pablo-jungle.jpg" alt="" class="login__img">
+               
+
+                <form action="" class="login__form">
+                  <div> 
+                      <h1 class="login__title"> 
+                          <span> Bienvenido </span> 
+                      </h1>
+                      <p class="login__description">
+                        Regístrate
+                      </p>
+                  </div>
+
+                    <div> 
+                      <div class="login__inputs">
+
+                        <div> 
+                          
+                        <label for="email" class="login__label">Email</label>
+                        <input type="text" placeholder="Escribe tu direción de correo electrónico" name="email" id="email" required class="login__input"> 
+                      </div>
+                      
+                      <div>
+                        <label label for="" class="login__label" >Contraseña</label>
+                        <div class="login__box">
+                        <input type="password" placeholder="Escribe tu contraseña" name="paw" id="paw" required class="login__input"> 
+                        <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+              <div>
+                <div class="login__buttons">
+                  
+
+
+                    <button type="button" id="submitData"  name="submitData" class="login__button login__button-ghost">Registrarme</button>
+                </div>
+
+
+                <a href="login.html" class="login__forgot">Inicia sesión</a>
+            </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/login.js"></script>
+    </body>
+</html>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAuth,
+       createUserWithEmailAndPassword, 
+       signInWithEmailAndPassword,
+       signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAm-VynFGXN6MW_vFD_bartRU8ZYteEDkM",
+      authDomain: "editorialbrooklyn-757ab.firebaseapp.com",
+      projectId: "editorialbrooklyn-757ab",
+      storageBucket: "editorialbrooklyn-757ab.appspot.com",
+      messagingSenderId: "910588682338",
+      appId: "1:910588682338:web:93cc876cd9df4219fc313b"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+
+
+    submitData.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+    
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('paw').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed up
+            const user = userCredential.user;
+            // ...
+            set(ref(database, 'users/' + user.uid), {
+                email: email,
+                password: password
+            })
+                .then(() => {
+                    // Data saved successfully!
+                    alert('usuario creado correctamente');
+                    window.location.href = 'index.html';
+                })
+                .catch((error) => {
+                    // The write failed...
+                    alert(error);
+                });
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            alert(errorMessage);
+  });
+
+//   signInWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+
+//     var lgDate = new Date();
+
+//     update(ref(database, 'users/' + user.uid), {
+//       last_login: lgDate,
+      
+//   }) 
+  
+  
+//   .then(() => {
+//   // Data saved successfully!
+//   window.location.href = 'index.html';
+ 
+//   })
+
+// .catch((error) => {
+//   // The write failed...
+//   alert(error);
+// });
+
+
+
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     alert(errorMessage);
+//   });
+
+//   signOut (auth).then(() => {
+//     // signout exitoso
+
+//   }).catch((error) => {
+//     // y el error ocurrre
+
+//   });
+
+});
+
+
+  </script>
+  
+
+
+
